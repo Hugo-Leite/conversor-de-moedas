@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+        <title>Conversor de moedas</title>
+    </head>
+    <body>
+        <figure id="figure-logo">
+            <img src="./assets/logo.gif" alt="logo " id="logo" />
+        </figure>
+        <div>
+            <main>
+                <label for="convert-from">Converter <strong>de</strong></label>
+                <select name="convert-from" id="convert-from">
+                    <option value="real">R$ Real brasileiro</option>
+                    <option value="dolar">US$ Dólar americano</option>
+                    <option value="euro">€ Euro</option>
+                    <option value="libra">£ Libra</option>
+                    <option value="bitcoin">₿ Bitcoin</option>
+                </select>
+
+                <label for="convert-to">Converter <strong>para</strong></label>
+                <select name="convert-to" id="convert-to">
+                    <option value="real">R$ Real brasileiro</option>
+                    <option value="dolar" selected>US$ Dólar americano</option>
+                    <option value="euro">€ Euro</option>
+                    <option value="libra">£ Libra</option>
+                    <option value="bitcoin">₿ Bitcoin</option>
+                </select>
+
+                <label for="value"><strong>Valor</strong></label>
+                <input
+                    type="text"
+                    name="value"
+                    placeholder="Digite o valor para ser convertido (100.50)"
+                    autocomplete="off"
+                    id="value-to-convert"
+                />
+
+                <button id="btn-convert">Converter</button>
+
+                <section>
+                    <figure>
+                        <img
+                            src="./assets/brasil.png"
+                            alt="currency-to-be-converted"
+                            id="img-currency-to-be-converted"
+                            class="img-coin"
+                        />
+                    </figure>
+                    <p id="currency-to-be-converted" class="name-coin">real</p>
+                    <p class="value-coin">
+                        <span id="dollar-sign-currency-value">R$</span>
+                        <span id="currency-value">00,00</span>
+                    </p>
+
+                    <figure>
+                        <img src="./assets/Vector.png" alt="seta" class="vector" />
+                    </figure>
+
+                    <figure>
+                        <img
+                            src="./assets/estados-unidos.png"
+                            alt="converted-currency"
+                            id="img-converted-currency"
+                            class="img-coin"
+                        />
+                    </figure>
+                    <p id="converted-currency" class="name-coin">dólar</p>
+                    <p class="value-coin">
+                        <span id="dollar-sign-converted-value">US$</span>
+                        <span id="converted-value">00,00</span>
+                    </p>
+                </section>
+            </main>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
